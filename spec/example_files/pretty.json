@@ -1,0 +1,35 @@
+{
+  "first indent": {
+    "one": 1,
+    "two": 2,
+    "array": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "three": 3,
+    "four": "some nice string",
+    "five": [
+      {
+        "nested": "cool",
+        "even more nested": {
+          "test": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        }
+      }
+    ]
+  }
+}
