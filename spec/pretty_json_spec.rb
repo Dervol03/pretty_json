@@ -49,4 +49,28 @@ describe PrettyJson do
     end# file does not exist
 
   end# given a file name
+
+
+  context 'instance methods' do
+    subject{ described_class.new(valid_json) }
+
+    describe '#to_s' do
+      it 'return pretty JSON as string' do
+        expect(subject.to_s).to eq(pretty_json)
+      end
+    end# #to_s
+
+
+    describe '#to_file' do
+      it 'writes pretty JSON to specified file' do
+        out_file = File.join(OUTPUT_DIR, 'out.json')
+        expect(File.exist?(out_file)).to be false
+
+        expect(subject.to_file(out_file)).to eq(pretty_json)
+
+        expect(File.exist?(out_file)).to be true
+        expect(File.read(out_file)).to eq(pretty_json)
+      end
+    end# #to_file
+  end# instance methods
 end
