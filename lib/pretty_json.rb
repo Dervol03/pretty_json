@@ -7,11 +7,8 @@ class PrettyJson
 
   # @param [String] input either a file path or a JSON string.
   def initialize(input)
-    @json = if File.exist?(input)
-       JSON.pretty_unparse(JSON.parse(File.read(input)))
-    else
-      JSON.pretty_unparse(JSON.parse(input))
-    end
+    json_hash = send("#{input.class.name.downcase}_to_hash", input)
+    @json = JSON.pretty_unparse(json_hash)
   end
 
 
@@ -29,4 +26,18 @@ class PrettyJson
     File.write(out_file, @json)
     @json
   end
+
+
+  private
+
+  def hash_to_hash(hash)
+    hash
+  end
+
+
+  def string_to_hash(string)
+    json = File.exist?(string) ? File.read(string) : string
+    JSON.parse(json)
+  end
+
 end

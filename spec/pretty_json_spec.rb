@@ -32,6 +32,14 @@ describe PrettyJson do
 
 
     context 'file does not exist' do
+      context 'argument is a ruby Hash' do
+        it 'unparses the Hash to JSON' do
+          hash = JSON.parse(valid_json)
+          inst = described_class.new(hash)
+          expect(inst.instance_variable_get('@json')).to eq(pretty_json)
+        end
+      end# argument is a ruby Hash
+
       context 'string is valid JSON' do
         it 'parses JSON from string' do
           inst = described_class.new(valid_json)
