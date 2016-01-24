@@ -6,7 +6,11 @@ def help
   puts 'Usage:'
   puts '  pretty_json [file_path|json_string]'
   puts
+  puts '[Options]'
+  puts '  -               read multiple lines from standard in (no single quotes needed).'
+  puts
   puts 'You may specify a file path or a JSON string to be parsed and formatted.'
+  puts 'IMPORTANT: make sure to surround your JSON with single quotes to prevent the shell from splitting it by its own.'
   exit 0
 end
 
@@ -16,9 +20,13 @@ if %w(-h --help).include?(ARGV[0]) || ARGV.empty?
 end
 
 input = if ARGV.length == 1
-         ARGV[0]
-       else
-         ARGV.join
+          if ARGV[0] == '-'
+            STDIN.read
+          else
+            ARGV[0]
+          end
+        else
+          ARGV.join
         end
 
 Dir.chdir(Dir.pwd) do
