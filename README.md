@@ -40,20 +40,22 @@ json.to_file('/tmp/example.json')   #=> writes pretty JSON to /tmp.example.json
 ### On the command line
 
 If you only need quick formatting for some JSON, there are three possibilities to do so using the command line tool:
- 1. save your JSON in a file and pass the file name to the command line tool
+
+1. save your JSON in a file and pass the file name to the command line tool
 
     ```shell
     pretty_json example.json
     ```
 
- 2. pass the JSON as a single line to the command line tool:
+2. pass the JSON as a single line to the command line tool:
 
     ```shell
     pretty_json '{"key": "value", "array":[1,2,3]}'
     ```
 
     Beware the single quotes around the JSON string. If they are omitted, the shell interpreter will split the string as it thinks correct, which will result in invalid JSON in most cases
- 3. you may pass multiline via STDIN using the `-` option
+
+3. you may pass multiline via STDIN using the `-` option
 
     ```shell
     pretty_json - > /tmp/example.json
@@ -72,4 +74,11 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Dervol
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
+## Latest Changes
+
+### 1.0.1
+
+- Improved README markdown
 
