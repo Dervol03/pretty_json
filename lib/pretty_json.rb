@@ -3,7 +3,7 @@ require 'json'
 require 'pretty_json/version'
 
 # Represents a pretty JSON string.
-class PrettyJson
+class PrettyJSON
 
   # @param [String] input either a file path or a JSON string.
   def initialize(input)

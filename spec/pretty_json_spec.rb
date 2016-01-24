@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PrettyJson do
+describe PrettyJSON do
   let(:valid_file)    { File.join(EXAMPLES_DIR, 'valid.json')   }
   let(:invalid_file)  { File.join(EXAMPLES_DIR, 'invalid.json') }
   let(:pretty_file)   { File.join(EXAMPLES_DIR, 'pretty.json')  }
@@ -9,7 +9,7 @@ describe PrettyJson do
   let(:pretty_json)   { File.read(pretty_file)                  }
 
   it 'has a version number' do
-    expect(PrettyJson::VERSION).not_to be nil
+    expect(described_class::VERSION).not_to be nil
   end
 
   context 'given a file name' do

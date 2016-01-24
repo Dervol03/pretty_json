@@ -5,7 +5,7 @@ require 'pretty_json/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'pretty_json'
-  spec.version       = PrettyJson::VERSION
+  spec.version       = PrettyJSON::VERSION
   spec.authors       = ['Yves Komenda']
   spec.email         = ['b_d_v@web.de']
 
