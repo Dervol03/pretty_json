@@ -32,6 +32,6 @@ input = if ARGV.length == 1
 Dir.chdir(Dir.pwd) do
   puts
   puts
-  puts PrettyJson.new(input).to_s
+  puts PrettyJSON.new(input).to_s
   puts
 end
