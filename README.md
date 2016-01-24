@@ -1,5 +1,7 @@
 # PrettyJson
 
+<a href="https://codeclimate.com/github/Dervol03/pretty_json"><img src="https://codeclimate.com/github/Dervol03/pretty_json/badges/gpa.svg" /></a>  <a href="https://travis-ci.org/Dervol03/pretty_json"><img src="https://travis-ci.org/Dervol03/pretty_json.svg?branch=master" /></a>
+
 This gem provides a simple interface to get pretty formatted JSON. It either can be used in a project or via the command line. When included in code, it provides the possibility to return the formatted JSON as string or to directly store it in a file. The latter option is not provided in the command line tool as you can refer to your favourite shell's file redirection for that purpose.
 
 ## Installation
